@@ -1,0 +1,10 @@
+export const API_RESPONSE_CODE = {
+  SUCCESS: 0,
+  BAD_REQUEST: 40000,
+  UNAUTHORIZED: 40100,
+  FORBIDDEN: 40300,
+  NOT_FOUND: 40400,
+  INTERNAL_ERROR: 50000,
+} as const;
+
+export type ApiResponseCode = (typeof API_RESPONSE_CODE)[keyof typeof API_RESPONSE_CODE];
